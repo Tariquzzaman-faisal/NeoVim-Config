@@ -1,3 +1,4 @@
+source $HOME/.config/nvim/plug-config/coc.vim
 set encoding=utf-8
 set number relativenumber
 set scrolloff=11
@@ -9,16 +10,16 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set fileformat=unix
+set nocompatible
 
-
-let mapleader=' '
+let mapleader=','
 
 call plug#begin('~/.vim/plugged')
 
 "Theme
 Plug 'morhetz/gruvbox'
 Plug 'arcticicestudio/nord-vim'
-
+Plug 'joshdick/onedark.vim'
 "Auto Pair
 Plug 'jiangmiao/auto-pairs'
 
@@ -34,20 +35,28 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 "Snippets
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+"Plug 'sirver/ultisnips' | Plug 'honza/vim-snippets'
 
 "File explorer
 Plug 'preservim/nerdtree'
+
+"Language pack
+Plug 'sheerun/vim-polyglot'
+
+"Intellisense
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+
 
 call plug#end()
 
 
 
 
+syntax on
+colorscheme onedark
 
-colorscheme nord
-
-let g:airline_theme='nord'
+let g:airline_theme='onedark'
 
 if(has("termguicolors"))
     set termguicolors
