@@ -85,3 +85,5 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+"Prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
