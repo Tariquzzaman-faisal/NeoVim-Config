@@ -13,6 +13,7 @@ set fileformat=unix
 set nocompatible
 
 let mapleader=','
+let g:user_emmet_leader_key=','
 
 call plug#begin('~/.vim/plugged')
 
@@ -46,6 +47,9 @@ Plug 'sheerun/vim-polyglot'
 "Intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+
+"Html autocomplete with <C_y> + leader key
+Plug 'mattn/emmet-vim'
 
 
 call plug#end()
