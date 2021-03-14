@@ -14,7 +14,9 @@ set nocompatible
 
 let mapleader=','
 let g:user_emmet_leader_key=','
-
+let g:coc_filetype_map = {
+      \ 'jst': 'html',
+      \ }
 call plug#begin('~/.vim/plugged')
 
 "Theme
